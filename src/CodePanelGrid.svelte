@@ -4,10 +4,9 @@
 	import { play } from 'svelte-awesome/icons';
 	import Responsize from './Responsize.svelte';
 	import { EditorUtil } from './util/EditorUtil.js';
-	import { Store} from './store/Store.js'
+	import { Store } from './store/Store.js';
 
 	export let showOutputPanel;
-
 
 	let valacode = Store.getValaCode();
 	let c_code = ``;
@@ -64,7 +63,7 @@
 		/>
 	</div>
 
-	<div slot="mobile" class="container container-mobile">
+	<div slot="mobile" class="container">
 		<CodePanel className="vala-code-panel" title="Vala Code" bind:editor={valaeditor} options={optionsvala}>
 			<div class="floating" style="right:10px;top: 50px; z-index : 3;">
 				<button class="circular primary center" on:click={onConvertClick}>
@@ -80,7 +79,7 @@
 				options={optionsoutput}
 			/>
 		{:else}
-			<CodePanel title="C Code" bind:editor={ceditor} options={optionsc} editorClassName="c-editor" />
+			<CodePanel title="C Code" bind:editor={ceditor} options={optionsc} />
 		{/if}
 	</div>
 </Responsize>
@@ -98,13 +97,20 @@
 		gap: var(--container-gap);
 	}
 
-	.container-mobile {
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr;
-	}
-
 	:global(.c-code-panel) {
 		grid-column: 2/3;
 		grid-row: 1/3;
+	}
+
+	@media only screen and (max-width: 767px) {
+		.container {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
+
+		:global(.c-code-panel) {
+			grid-column: auto;
+			grid-row: auto;
+		}
 	}
 </style>

@@ -1,6 +1,6 @@
 <script>
 	import Media from './Media.svelte';
-	let width = 600;
+	let width = 767;
 </script>
 
 <Media query={'(min-width: ' + width + 'px)'} let:matches>

@@ -5,7 +5,7 @@
 	let showOutputPanel;
 </script>
 
-<Appbar bind:showOutputPanel/>
+<Appbar bind:showOutputPanel />
 <CodePanelGrid {showOutputPanel} />
 
 <style>
@@ -15,12 +15,12 @@
 		--primary-bgcolor: blueviolet;
 		--primary-color: white;
 
-		--primary-variant-bgcolor : rgb(171, 91, 246);
+		--primary-variant-bgcolor: rgb(171, 91, 246);
 		--primary-variant-color: white;
 
 		--secondary-bgcolor: coral;
 		--secondary-color: white;
-		
+
 		--ground-bgcolor: rgb(251, 245, 245);
 		--ground-color: black;
 
@@ -32,7 +32,11 @@
 
 		--container-padding: 10px;
 		--container-gap: 10px;
-
+		
+		--cm-border-color: #ccc !important;
+		--cm-background-color: white !important;
+		--cm-medium-color: #ccc !important;
+		--cm-text-color: #222 !important;
 	}
 
 	:global(body) {
