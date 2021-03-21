@@ -11429,11 +11429,11 @@ var app = (function () {
     			if (default_slot) default_slot.c();
     			t2 = space();
     			create_component(codemirror.$$.fragment);
-    			attr_dev(h3, "class", "svelte-17aeqsf");
+    			attr_dev(h3, "class", "svelte-5h5lv");
     			add_location(h3, file$6, 15, 32, 370);
-    			attr_dev(div0, "class", "code-panel-topbar svelte-17aeqsf");
+    			attr_dev(div0, "class", "code-panel-topbar svelte-5h5lv");
     			add_location(div0, file$6, 15, 1, 339);
-    			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty("code-panel " + /*className*/ ctx[3]) + " svelte-17aeqsf"));
+    			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty("code-panel " + /*className*/ ctx[3]) + " svelte-5h5lv"));
     			add_location(div1, file$6, 14, 0, 298);
     		},
     		l: function claim(nodes) {
@@ -11474,7 +11474,7 @@ var app = (function () {
 
     			codemirror.$set(codemirror_changes);
 
-    			if (!current || dirty & /*className*/ 8 && div1_class_value !== (div1_class_value = "" + (null_to_empty("code-panel " + /*className*/ ctx[3]) + " svelte-17aeqsf"))) {
+    			if (!current || dirty & /*className*/ 8 && div1_class_value !== (div1_class_value = "" + (null_to_empty("code-panel " + /*className*/ ctx[3]) + " svelte-5h5lv"))) {
     				attr_dev(div1, "class", div1_class_value);
     			}
     		},
@@ -14094,7 +14094,7 @@ var app = (function () {
     			t1 = space();
     			create_component(codepanel2.$$.fragment);
     			attr_dev(div, "slot", "desktop");
-    			attr_dev(div, "class", "container svelte-cm2bmw");
+    			attr_dev(div, "class", "container svelte-1o6vfes");
     			add_location(div, file$1, 77, 1, 1631);
     		},
     		m: function mount(target, anchor) {
@@ -14420,7 +14420,7 @@ var app = (function () {
     			t = space();
     			if_block.c();
     			attr_dev(div, "slot", "mobile");
-    			attr_dev(div, "class", "container container-mobile svelte-cm2bmw");
+    			attr_dev(div, "class", "container container-mobile svelte-1o6vfes");
     			add_location(div, file$1, 94, 1, 2234);
     		},
     		m: function mount(target, anchor) {
@@ -14836,7 +14836,7 @@ var app = (function () {
     			button = element("button");
     			if_block.c();
     			attr_dev(button, "slot", "mobile");
-    			attr_dev(button, "class", "secondary svelte-mawlgq");
+    			attr_dev(button, "class", "secondary svelte-pluu5k");
     			add_location(button, file, 14, 3, 262);
     		},
     		m: function mount(target, anchor) {
@@ -14903,9 +14903,9 @@ var app = (function () {
     			div0 = element("div");
     			create_component(responsize.$$.fragment);
     			add_location(h2, file, 11, 1, 199);
-    			attr_dev(div0, "class", "flex right svelte-mawlgq");
+    			attr_dev(div0, "class", "flex right svelte-pluu5k");
     			add_location(div0, file, 12, 1, 219);
-    			attr_dev(div1, "class", "appbar svelte-mawlgq");
+    			attr_dev(div1, "class", "appbar svelte-pluu5k");
     			add_location(div1, file, 10, 0, 177);
     		},
     		l: function claim(nodes) {

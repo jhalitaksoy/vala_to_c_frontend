@@ -10,29 +10,29 @@
 
 <style>
 	:global(:root) {
-		--appbar-bgcolor: coral;
-		--appbar-color: white;
-		--appbar-height: 50px;
-		--appbar-padding: 0 20px 0 20px;
-		--appbar-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-
-		--container-bgcolor: transparent;
-		--container-color: black;
-		--container-margin: 10px;
-		--container-gap: 10px;
-
 		--codepanel-topbar-height: 40px;
 
 		--primary-bgcolor: blueviolet;
 		--primary-color: white;
 
-		--secondary-bgcolor: lightblue;
-		--secondary-color: red;
+		--primary-variant-bgcolor : rgb(171, 91, 246);
+		--primary-variant-color: white;
 
-		--ground-color: white;
-		--ground-text-color: black;
+		--secondary-bgcolor: coral;
+		--secondary-color: white;
+		
+		--ground-bgcolor: rgb(251, 245, 245);
+		--ground-color: black;
 
 		--button-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+
+		--appbar-height: 50px;
+		--appbar-padding: 0 10px 0 10px;
+		--appbar-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+
+		--container-padding: 10px;
+		--container-gap: 10px;
+
 	}
 
 	:global(body) {
@@ -64,6 +64,9 @@
 		border-radius: 50px;
 		width: 50px;
 		height: 50px;
+
+		border-width: 0;
+		outline: none;
 	}
 
 	:global(.center) {

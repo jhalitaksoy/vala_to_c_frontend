@@ -21,7 +21,7 @@
 <style>
 	.code-panel {
 		flex: 1;
-		color: white;
+		color: transparent;
 		display: flex;
 		flex-direction: column;
 		border-radius: 10px;
@@ -30,10 +30,12 @@
 	}
 
 	.code-panel-topbar {
-		background: rgb(245, 174, 149);
+		background: var(--primary-variant-bgcolor);
+		color : var(--primary-variant-color);
+
 		height: var(--codepanel-topbar-height);
 		padding-left: 25px;
-		color: white;
+
 		display: flex;
 		align-items: center;
 		border-top-left-radius: 10px;
@@ -45,9 +47,7 @@
 	}
 
 	:global(.editor) {
-		font-size: 1.2rem;
 		flex: 1;
-		border-radius: 10px;
 		overflow: auto;
 		position: absolute;
 		top: var(--codepanel-topbar-height);

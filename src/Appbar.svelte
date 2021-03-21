@@ -25,7 +25,8 @@
 
 <style>
 	button {
-		padding: 5px;
+		padding: 8px;
+		border-radius: 10px;
 
 		border-width: 0;
 		outline: none;
@@ -38,8 +39,8 @@
 	}
 
 	.appbar {
-		color: var(--appbar-color);
-		background: var(--appbar-bgcolor);
+		color: var(--primary-color);
+		background: var(--primary-bgcolor);
 		box-shadow: var(--appbar-box-shadow);
 
 		height: var(--appbar-height);

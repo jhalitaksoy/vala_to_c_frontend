@@ -115,9 +115,9 @@
 
 <style>
 	.container {
-		color: var(--container-color);
-		background: var(--container-bgcolor);
-		margin: var(--container-margin);
+		color: var(--ground-color);
+		background: var(--ground-bgcolor);
+		padding: var(--container-padding);
 
 		flex: 1;
 		display: grid;
