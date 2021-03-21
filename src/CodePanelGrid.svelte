@@ -3,12 +3,13 @@
 	import Icon from 'svelte-awesome';
 	import { play } from 'svelte-awesome/icons';
 	import Responsize from './Responsize.svelte';
+	import { EditorUtil } from './util/EditorUtil.js';
+	import { Store} from './store/Store.js'
 
 	export let showOutputPanel;
 
-	const codevala = `void main (string[] args) {
-	stdout.printf ("Hello world!");
-}`;
+
+	let valacode = Store.getValaCode();
 	let c_code = ``;
 	let output = ``;
 
@@ -16,34 +17,9 @@
 	let ceditor;
 	let outputeditor;
 
-	const getOptionsvala = () => {
-		return {
-			mode: 'text/x-csrc',
-			lineNumbers: true,
-			value: codevala,
-			viewportMargin: 0,
-		};
-	};
-	const getOptionsc = () => {
-		return {
-			mode: 'text/x-csrc',
-			lineNumbers: true,
-			value: c_code,
-			readOnly: true,
-		};
-	};
-
-	const getOptionsOutput = () => {
-		return {
-			lineNumbers: true,
-			value: output,
-			readOnly: true,
-		};
-	};
-
-	let optionsvala = getOptionsvala();
-	let optionsc = getOptionsc();
-	let optionsoutput = getOptionsOutput();
+	let optionsvala = EditorUtil.getOptionsVala(valacode);
+	let optionsc = EditorUtil.getOptionsC(c_code);
+	let optionsoutput = EditorUtil.getOptionsOutput(output);
 
 	async function onConvertClick() {
 		const url = 'http://localhost:8000/vala_to_c';
@@ -53,22 +29,18 @@
 		};
 		let response = await fetch(url, data);
 		if (response.ok) {
-			// if HTTP-status is 200-299
-			// get the response body (the method explained below)
-			const _c_code = await response.text();
+			c_code = await response.text();
 			showOutputPanel = false;
 			output = '';
-			c_code = _c_code;
-			optionsc = getOptionsc();
-			optionsoutput = getOptionsOutput();
+			optionsc = EditorUtil.getOptionsC(c_code);
+			optionsoutput = EditorUtil.getOptionsOutput(output);
 		} else {
 			if (response.status == 409) {
-				const erroutput = await response.text();
+				output = await response.text();
 				showOutputPanel = true;
-				output = erroutput;
 				c_code = '';
-				optionsc = getOptionsc();
-				optionsoutput = getOptionsOutput();
+				optionsc = EditorUtil.getOptionsC(c_code);
+				optionsoutput = EditorUtil.getOptionsOutput(output);
 			}
 		}
 	}
