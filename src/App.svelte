@@ -8,6 +8,10 @@
 <Appbar bind:showOutputPanel />
 <CodePanelGrid {showOutputPanel} />
 
+<svelte:head>
+	<title>Vala to C</title>
+</svelte:head>
+
 <style>
 	:global(:root) {
 		--codepanel-topbar-height: 40px;

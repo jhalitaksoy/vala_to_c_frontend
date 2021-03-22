@@ -15320,8 +15320,9 @@ var app = (function () {
     function create_fragment(ctx) {
     	let appbar;
     	let updating_showOutputPanel;
-    	let t;
+    	let t0;
     	let codepanelgrid;
+    	let t1;
     	let current;
 
     	function appbar_showOutputPanel_binding(value) {
@@ -15347,16 +15348,19 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			create_component(appbar.$$.fragment);
-    			t = space();
+    			t0 = space();
     			create_component(codepanelgrid.$$.fragment);
+    			t1 = space();
+    			document.title = "Vala to C";
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			mount_component(appbar, target, anchor);
-    			insert_dev(target, t, anchor);
+    			insert_dev(target, t0, anchor);
     			mount_component(codepanelgrid, target, anchor);
+    			insert_dev(target, t1, anchor);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -15386,8 +15390,9 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			destroy_component(appbar, detaching);
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(t0);
     			destroy_component(codepanelgrid, detaching);
+    			if (detaching) detach_dev(t1);
     		}
     	};
 
