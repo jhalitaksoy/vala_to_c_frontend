@@ -25,6 +25,7 @@
 		--ground-color: black;
 
 		--button-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+		--common-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
 
 		--appbar-height: 50px;
 		--appbar-padding: 0 10px 0 10px;

@@ -5,6 +5,7 @@
 	import Responsize from './Responsize.svelte';
 	import { EditorUtil } from './util/EditorUtil.js';
 	import { Store } from './store/Store.js';
+	import MessageBox from './MessageBox.svelte';
 
 	export let showOutputPanel;
 
@@ -20,27 +21,29 @@
 	let optionsc = EditorUtil.getOptionsC(c_code);
 	let optionsoutput = EditorUtil.getOptionsOutput(output);
 
+	let message = undefined;
+
 	async function onConvertClick() {
-		const url = 'http://localhost:8000/vala_to_c';
-		const data = {
-			method: 'POST',
-			body: valaeditor.getValue(),
-		};
-		let response = await fetch(url, data);
-		if (response.ok) {
-			c_code = await response.text();
-			showOutputPanel = false;
-			output = '';
-			optionsc = EditorUtil.getOptionsC(c_code);
-			optionsoutput = EditorUtil.getOptionsOutput(output);
-		} else {
-			if (response.status == 409) {
-				output = await response.text();
-				showOutputPanel = true;
-				c_code = '';
+		try {
+			const url = 'http://localhost:8000/vala_to_c';
+			const data = {
+				method: 'POST',
+				body: valaeditor.getValue(),
+			};
+			let response = await fetch(url, data);
+			if (response.ok) {
+				const json = await response.json();
+				c_code = json.c_code;
+				showOutputPanel = json.has_error;
+				output = json.stdout + json.stderr;
 				optionsc = EditorUtil.getOptionsC(c_code);
 				optionsoutput = EditorUtil.getOptionsOutput(output);
+			} else {
 			}
+		} catch (error) {
+			console.log(error);
+			console.log('Network Error');
+			message = 'Network Error!';
 		}
 	}
 </script>
@@ -83,6 +86,8 @@
 		{/if}
 	</div>
 </Responsize>
+
+<MessageBox bind:message />
 
 <style>
 	.container {
