@@ -26,7 +26,7 @@
 	async function onConvertClick() {
 		try {
 			//const url = 'http://localhost:8000/vala_to_c';
-			const url = 'https://46.101.134.10/valatoc/vala_to_c';
+			const url = 'https://halitaksoy.com/valatoc/vala_to_c';
 			const data = {
 				method: 'POST',
 				body: valaeditor.getValue(),
