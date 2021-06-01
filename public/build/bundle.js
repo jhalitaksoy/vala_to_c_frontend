@@ -14242,7 +14242,7 @@ var app = (function () {
     const { console: console_1 } = globals;
     const file$1 = "src/CodePanelGrid.svelte";
 
-    // (53:2) <CodePanel className="vala-code-panel" title="Vala Code" bind:editor={valaeditor} options={optionsvala}>
+    // (54:2) <CodePanel className="vala-code-panel" title="Vala Code" bind:editor={valaeditor} options={optionsvala}>
     function create_default_slot_1(ctx) {
     	let div;
     	let button;
@@ -14262,10 +14262,10 @@ var app = (function () {
     			button = element("button");
     			create_component(icon.$$.fragment);
     			attr_dev(button, "class", "circular primary center");
-    			add_location(button, file$1, 54, 4, 1528);
+    			add_location(button, file$1, 55, 4, 1589);
     			attr_dev(div, "class", "floating");
     			attr_dev(div, "style", "right:10px;top: 50px; z-index : 3;");
-    			add_location(div, file$1, 53, 3, 1458);
+    			add_location(div, file$1, 54, 3, 1519);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -14300,14 +14300,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(53:2) <CodePanel className=\\\"vala-code-panel\\\" title=\\\"Vala Code\\\" bind:editor={valaeditor} options={optionsvala}>",
+    		source: "(54:2) <CodePanel className=\\\"vala-code-panel\\\" title=\\\"Vala Code\\\" bind:editor={valaeditor} options={optionsvala}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:1) 
+    // (53:1) 
     function create_desktop_slot(ctx) {
     	let div;
     	let codepanel0;
@@ -14383,7 +14383,7 @@ var app = (function () {
     			create_component(codepanel2.$$.fragment);
     			attr_dev(div, "slot", "desktop");
     			attr_dev(div, "class", "container svelte-l42wjw");
-    			add_location(div, file$1, 51, 1, 1309);
+    			add_location(div, file$1, 52, 1, 1370);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -14454,14 +14454,14 @@ var app = (function () {
     		block,
     		id: create_desktop_slot.name,
     		type: "slot",
-    		source: "(52:1) ",
+    		source: "(53:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:2) <CodePanel className="vala-code-panel" title="Vala Code" bind:editor={valaeditor} options={optionsvala}>
+    // (71:2) <CodePanel className="vala-code-panel" title="Vala Code" bind:editor={valaeditor} options={optionsvala}>
     function create_default_slot(ctx) {
     	let div;
     	let button;
@@ -14481,10 +14481,10 @@ var app = (function () {
     			button = element("button");
     			create_component(icon.$$.fragment);
     			attr_dev(button, "class", "circular primary center");
-    			add_location(button, file$1, 71, 4, 2130);
+    			add_location(button, file$1, 72, 4, 2191);
     			attr_dev(div, "class", "floating");
     			attr_dev(div, "style", "right:10px;top: 50px; z-index : 3;");
-    			add_location(div, file$1, 70, 3, 2060);
+    			add_location(div, file$1, 71, 3, 2121);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -14519,14 +14519,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(70:2) <CodePanel className=\\\"vala-code-panel\\\" title=\\\"Vala Code\\\" bind:editor={valaeditor} options={optionsvala}>",
+    		source: "(71:2) <CodePanel className=\\\"vala-code-panel\\\" title=\\\"Vala Code\\\" bind:editor={valaeditor} options={optionsvala}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (84:2) {:else}
+    // (85:2) {:else}
     function create_else_block$1(ctx) {
     	let codepanel;
     	let updating_editor;
@@ -14586,14 +14586,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(84:2) {:else}",
+    		source: "(85:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:2) {#if showOutputPanel}
+    // (78:2) {#if showOutputPanel}
     function create_if_block$1(ctx) {
     	let codepanel;
     	let updating_editor;
@@ -14654,14 +14654,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(77:2) {#if showOutputPanel}",
+    		source: "(78:2) {#if showOutputPanel}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (69:1) 
+    // (70:1) 
     function create_mobile_slot$1(ctx) {
     	let div;
     	let codepanel;
@@ -14708,7 +14708,7 @@ var app = (function () {
     			if_block.c();
     			attr_dev(div, "slot", "mobile");
     			attr_dev(div, "class", "container svelte-l42wjw");
-    			add_location(div, file$1, 68, 1, 1912);
+    			add_location(div, file$1, 69, 1, 1973);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -14779,7 +14779,7 @@ var app = (function () {
     		block,
     		id: create_mobile_slot$1.name,
     		type: "slot",
-    		source: "(69:1) ",
+    		source: "(70:1) ",
     		ctx
     	});
 
@@ -14896,7 +14896,8 @@ var app = (function () {
 
     	async function onConvertClick() {
     		try {
-    			const url = "http://localhost:8000/vala_to_c";
+    			//const url = 'http://localhost:8000/vala_to_c';
+    			const url = "https://halitaksoy.com/valatoc/vala_to_c";
 
     			const data = {
     				method: "POST",
